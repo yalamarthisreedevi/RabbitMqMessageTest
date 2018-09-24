@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  producerconsoleapp:
+    image: ${DOCKER_REGISTRY}producerconsoleapp
+    build:
+      context: .
+      dockerfile: ProducerConsoleApp\Dockerfile
+
+  consumerconsoleapp:
+    image: ${DOCKER_REGISTRY}consumerconsoleapp
+    build:
+      context: .
+      dockerfile: ConsumerConsoleApp\Dockerfile
+
